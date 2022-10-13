@@ -46,12 +46,13 @@ const Container = styled.div`
   top: 0;
   background-color: white;
   z-index: 50;
-  height: 1.25cm;
+  height: 2cm;
   nav {
-    margin-right: 2.5cm;
+    margin-right: 5cm;
   }
   .logo {
     width: 15vw;
+    margin-top: 10px;
     img {
       width: 100%;
       height: 100%;
@@ -60,8 +61,8 @@ const Container = styled.div`
 `;
 const PageLink = styled(Link)`
   text-decoration: none;
-  margin: 0 10px;
-  font-size: 12.5px;
+  margin: 0 15px;
+  font-size: 20px;
   padding-bottom: 5px;
   color: green;
   border-bottom: 2px solid transparent;

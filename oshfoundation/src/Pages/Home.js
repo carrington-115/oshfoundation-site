@@ -81,6 +81,15 @@ function Home() {
             </div>
             <div className="yde"></div>
           </section>
+          <section className="join-us">
+            <h1>
+              If have not yet joined our Community?
+              <br /> Join Now and be the first to know anything about us.
+            </h1>
+            <input className="name" type="text" placeholder="Name" />
+            <input className="email" type="email" placeholder="Email" />
+            <button>Join Now</button>
+          </section>
         </div>
         <aside>an aside</aside>
       </Content>
@@ -102,10 +111,11 @@ let Container = styled.section`
 
 let Content = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 100%;
   min-height: 100vh;
-  margin-top: 1cm;
+  background-color: rgba(236, 255, 233, 0.8);
+  padding-top: 1cm;
+
   .content,
   aside {
     display: flex;
@@ -119,14 +129,16 @@ let Content = styled.div`
     .vision-part {
       .heading {
         font-family: times new roman;
-        font-size: 18px;
+        font-size: 30px;
         margin-bottom: 10px;
         text-align: center;
       }
       p {
         text-align: justify;
-        padding: 0px 1cm 5px 1cm;
+        padding: 0px 2cm 5px 2cm;
         line-height: 1.4em;
+        font-size: 25px;
+        margin-bottom: 1cm;
       }
       .vision-img {
         display: flex;
@@ -134,7 +146,7 @@ let Content = styled.div`
         width: 100%;
         margin-bottom: 0.5cm;
         img {
-          width: 80%;
+          width: 70%;
           height: 100%;
         }
       }
@@ -143,18 +155,20 @@ let Content = styled.div`
         display: flex;
         justify-content: center;
         button {
-          width: 3cm;
+          width: 5cm;
           height: 2em;
+          font-size: 1.5em;
           border-color: transparent;
           color: white;
           background-color: rgb(4, 143, 16);
           cursor: pointer;
           border-radius: 2px;
-          border: 1.5px solid black;
+          border: 1.5px solid transparent;
           margin-bottom: 20px;
           &:hover {
             color: black;
             background-color: white;
+            border-color: black;
           }
         }
       }
@@ -162,14 +176,14 @@ let Content = styled.div`
     .founder {
       display: flex;
       align-items: center;
-      width: 80%;
+      width: 70%;
       justify-content: center;
-      padding: 5px 1cm;
+      padding: 1cm;
       background-color: rgba(0, 0, 0, 0.1);
       border-radius: 20px;
       margin-bottom: 1cm;
       .founder-img {
-        width: 4.5cm;
+        width: 7cm;
         margin-right: 30px;
         img {
           width: 100%;
@@ -185,25 +199,27 @@ let Content = styled.div`
         p {
           font-style: italic;
           text-align: center;
-          font-size: 15px;
+          font-size: 1.35em;
         }
         h1 {
-          font-size: 15px;
+          font-size: 2em;
           text-align: center;
         }
         button {
-          width: 3cm;
+          width: 5cm;
           height: 2em;
           border-color: transparent;
           color: white;
+          font-size: 1.5em;
           background-color: rgb(4, 143, 16);
           cursor: pointer;
           border-radius: 2px;
-          border: 1.5px solid black;
+          border: 1.5px solid transparent;
           margin: 10px 0px;
           &:hover {
             color: black;
             background-color: white;
+            border-color: black;
           }
         }
       }
@@ -216,24 +232,30 @@ let Content = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-bottom: 1cm;
         button {
-          width: 3cm;
+          width: 8cm;
           height: 2em;
           border-color: transparent;
           color: white;
           background-color: rgb(4, 143, 16);
           cursor: pointer;
           border-radius: 2px;
-          border: 1.5px solid black;
+          border: 1.5px solid transparent;
           margin: 10px 0px;
+          font-size: 1.5em;
           &:hover {
             color: black;
             background-color: white;
+            border-color: black;
           }
+        }
+        p{
+            font-size: 2em;
         }
         .bde-img,
         .yde-img {
-          width: 80%;
+          width: 75%;
           img {
             width: 100%;
             height: 100%;
@@ -241,6 +263,49 @@ let Content = styled.div`
         }
       }
     }
+    .join-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 1cm;
+        margin-bottom: 1cm;
+        width: 70%;
+        h1 {
+          width: 70%;
+          font-size: 2em;
+          font-family: cambria;
+          text-align: center;
+          margin-bottom: 10px;
+          color: rgb(4, 143, 16);
+        }
+        input {
+          width: 10cm;
+          margin-bottom: 10px;
+          height: 1.25cm;
+          font-size: 1.25em;
+          padding-left: 1em;
+          background-color: rgba(4, 143, 16, 0.1);
+          border: 1px solid black;
+          border-radius: 3px;
+        }
+        button {
+          width: 5cm;
+          font-size: 1.5em;
+          border-color: transparent;
+          padding: .25cm;
+          color: white;
+          background-color: rgb(4, 143, 16);
+          cursor: pointer;
+          border-radius: 2px;
+          border: 1px solid transparent;
+          &:hover {
+            color: black;
+            border-color: black;
+            background-color: white;
+          }
+        }
   }
 
   aside {
@@ -253,11 +318,11 @@ let HeaderIntro = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5cm 0 1cm 0;
+  padding: 4cm 0 1cm 0;
   background-color: rgba(0, 0, 0, 0.1);
   .video-container {
-    width: 60%;
-    margin-left: 1cm;
+    width: 50%;
+    margin-left: 2cm;
     video {
       border-radius: 10px;
     }
@@ -268,29 +333,31 @@ let HeaderIntro = styled.div`
     flex-direction: column;
     align-items: center;
     h1 {
-      width: 70%;
-      font-size: 20px;
+      width: 80%;
+      font-size: 40px;
       font-family: cambria;
       text-align: center;
       margin-bottom: 10px;
       color: rgb(4, 143, 16);
     }
     input {
-      width: 5.5cm;
-      margin-bottom: 10px;
-      height: 25px;
+      width: 10cm;
+      margin-bottom: 20px;
+      font-size: 25px;
+      height: 1.25cm;
       padding-left: 1em;
       background-color: rgba(4, 143, 16, 0.1);
       border: 1px solid black;
       border-radius: 3px;
     }
     button {
-      width: 3cm;
+      width: 4cm;
       height: 2em;
       border-color: transparent;
       color: white;
       background-color: rgb(4, 143, 16);
       cursor: pointer;
+      font-size: 30px;
       border-radius: 2px;
       border: 1px solid transparent;
       &:hover {
