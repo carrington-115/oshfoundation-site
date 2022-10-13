@@ -37,7 +37,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 1cm;
+  padding: 15px 1cm 10px 1cm;
+  position: fixed;
+  box-shadow: 0.5px 0.5px 2px black;
+  width: 100%;
+  left: 0
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: 50;
+  height: 1.25cm;
   nav {
     margin-right: 2.5cm;
   }
@@ -55,10 +64,9 @@ const PageLink = styled(Link)`
   font-size: 12.5px;
   padding-bottom: 5px;
   color: green;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   &:hover {
     color: black;
     border-bottom-color: ${(props) => (props.logo ? "transparent" : "green")};
-    transition: 0.25s 250ms ease-out;
   }
 `;
