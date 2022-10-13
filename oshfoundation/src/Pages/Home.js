@@ -59,6 +59,23 @@ function Home() {
               <button>Learn More</button>
             </div>
           </section>
+          <section className="district">
+            <div className="bde">
+              <div className="bde-img">
+                <img src="/images/oshbde.jpg" alt="Oasis of Hope Bamenda" />
+              </div>
+              <p>Oasis of Hope Bamenda</p>
+              <button>Read our Blog</button>
+            </div>
+            <div className="yde">
+              <div className="yde-img">
+                <img src="/images/oshyde.jpg" alt="Oasis of Hope Yaounde" />
+              </div>
+              <p>Oasis of Hope Bamenda</p>
+              <button>Read our Blog</button>
+            </div>
+            <div className="yde"></div>
+          </section>
         </div>
         <aside>an aside</aside>
       </Content>
@@ -144,6 +161,7 @@ let Content = styled.div`
       justify-content: center;
       padding: 5px 1cm;
       background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
       margin-bottom: 1cm;
       .founder-img {
         width: 4.5cm;
@@ -164,9 +182,9 @@ let Content = styled.div`
           text-align: center;
           font-size: 15px;
         }
-        h1{
-            font-size: 15px;
-            text-align: center;
+        h1 {
+          font-size: 15px;
+          text-align: center;
         }
         button {
           width: 3cm;
@@ -177,7 +195,7 @@ let Content = styled.div`
           cursor: pointer;
           border-radius: 2px;
           border: 1.5px solid black;
-          margin-bottom: 20px;
+          margin: 10px 0px;
           &:hover {
             color: black;
             background-color: white;
