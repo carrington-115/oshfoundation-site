@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal";
+
 function Home() {
   return (
     <Container>
@@ -39,26 +41,29 @@ function Home() {
               <button>Read More</button>
             </div>
           </section>
-          <section className="founder">
-            <div className="founder-img">
-              <img src="/images/founder.jpg" alt="founder-photo" />
-            </div>
-            <div className="founder-text">
-              <h1>
-                Mrs. Mokom Mbahtiful Tracy
-                <br /> The Founder of OHA <hr />
-                <br />
-              </h1>
-              <p>
-                &nbsp;&nbsp; "Generally, my vision is to mentor young girls,
-                between 15-35 years, to act in a way that can have a positive
-                influence in their lives, family, and commmunity through
-                reproduction health, entrepreneurship, counselling, orientation,
-                and motivation."
-              </p>
-              <button>Learn More</button>
-            </div>
-          </section>
+          <Fade left>
+            <section className="founder">
+              <div className="founder-img">
+                <img src="/images/founder.jpg" alt="founder-photo" />
+              </div>
+              <div className="founder-text">
+                <h1>
+                  Mrs. Mokom Mbahtiful Tracy
+                  <br /> The Founder of OHA <hr />
+                  <br />
+                </h1>
+                <p>
+                  &nbsp;&nbsp; "Generally, my vision is to mentor young girls,
+                  between 15-35 years, to act in a way that can have a positive
+                  influence in their lives, family, and commmunity through
+                  reproduction health, entrepreneurship, counselling,
+                  orientation, and motivation."
+                </p>
+                <button>Learn More</button>
+              </div>
+            </section>
+          </Fade>
+
           <section className="district">
             <div className="bde">
               <div className="bde-img">
@@ -71,7 +76,7 @@ function Home() {
               <div className="yde-img">
                 <img src="/images/oshyde.jpg" alt="Oasis of Hope Yaounde" />
               </div>
-              <p>Oasis of Hope Bamenda</p>
+              <p>Oasis of Hope Yaounde</p>
               <button>Read our Blog</button>
             </div>
             <div className="yde"></div>
@@ -203,7 +208,41 @@ let Content = styled.div`
         }
       }
     }
+    .district {
+      .bde,
+      .yde {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        button {
+          width: 3cm;
+          height: 2em;
+          border-color: transparent;
+          color: white;
+          background-color: rgb(4, 143, 16);
+          cursor: pointer;
+          border-radius: 2px;
+          border: 1.5px solid black;
+          margin: 10px 0px;
+          &:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+        .bde-img,
+        .yde-img {
+          width: 80%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
+
   aside {
     width: 35%;
   }
