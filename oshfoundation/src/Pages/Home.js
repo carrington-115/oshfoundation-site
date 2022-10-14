@@ -254,8 +254,8 @@ let Content = styled.div`
             border-color: black;
           }
         }
-        p{
-            font-size: 2em;
+        p {
+          font-size: 2em;
         }
         .bde-img,
         .yde-img {
@@ -268,48 +268,49 @@ let Content = styled.div`
       }
     }
     .join-us {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        padding: 1cm;
-        margin-bottom: 1cm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 1cm;
+      margin-bottom: 1cm;
+      width: 70%;
+      h1 {
         width: 70%;
-        h1 {
-          width: 70%;
-          font-size: 2em;
-          font-family: cambria;
-          text-align: center;
-          margin-bottom: 10px;
-          color: rgb(4, 143, 16);
+        font-size: 2em;
+        font-family: cambria;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgb(4, 143, 16);
+      }
+      input {
+        width: 10cm;
+        margin-bottom: 10px;
+        height: 1.25cm;
+        font-size: 1.25em;
+        padding-left: 1em;
+        background-color: rgba(4, 143, 16, 0.1);
+        border: 1px solid black;
+        border-radius: 3px;
+      }
+      button {
+        width: 5cm;
+        font-size: 1.5em;
+        border-color: transparent;
+        padding: 0.25cm;
+        color: white;
+        background-color: rgb(4, 143, 16);
+        cursor: pointer;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        &:hover {
+          color: black;
+          border-color: black;
+          background-color: white;
         }
-        input {
-          width: 10cm;
-          margin-bottom: 10px;
-          height: 1.25cm;
-          font-size: 1.25em;
-          padding-left: 1em;
-          background-color: rgba(4, 143, 16, 0.1);
-          border: 1px solid black;
-          border-radius: 3px;
-        }
-        button {
-          width: 5cm;
-          font-size: 1.5em;
-          border-color: transparent;
-          padding: .25cm;
-          color: white;
-          background-color: rgb(4, 143, 16);
-          cursor: pointer;
-          border-radius: 2px;
-          border: 1px solid transparent;
-          &:hover {
-            color: black;
-            border-color: black;
-            background-color: white;
-          }
-        }
+      }
+    }
   }
 
   aside {

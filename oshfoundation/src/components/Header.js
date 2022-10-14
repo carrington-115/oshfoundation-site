@@ -26,6 +26,7 @@ function Header() {
         <PageLink to="contactus" logo={false}>
           Contact us
         </PageLink>
+        <button className="partner">Become a Partner</button>
       </nav>
     </Container>
   );
@@ -39,7 +40,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 15px 1cm 10px 1cm;
   position: fixed;
-  box-shadow: 0.5px 0.5px 2px black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   background-color: white;
   width: 100%;
   left: 0
@@ -48,7 +49,21 @@ const Container = styled.div`
   z-index: 50;
   height: 2cm;
   nav {
+    margin-top: 0.5cm;
     margin-right: 5cm;
+    button {
+      background-color: rgb(111, 192, 111);
+      padding: 0.25cm 0.5cm;
+      font-size: 20px;
+      border: 1px solid transparent;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 1cm;
+      border-radius: 20px;
+      &:hover {
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
   }
   .logo {
     width: 13vw;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Flip from "react-reveal/Flip";
 
 function Aboutus() {
   return (
@@ -81,6 +82,29 @@ function Aboutus() {
               satisfaction and " I'm relentless until no girl is hopeless".
             </p>
           </section>
+          <div className="team">
+            <h1>
+              The Team <hr />
+            </h1>
+          </div>
+          <Organization />
+          <div className="join-team">
+            <p>Do you want to be a part of this Team?</p>
+            <button>Leave us a message</button>
+          </div>
+          <div className="join-team">
+            <p>Do you want to Partner with us? Let us know.</p>
+            <button>Partner with us</button>
+          </div>
+          <section className="subscribe">
+            <h1>
+              If have not yet joined our Community?
+              <br /> Join Now and be the first to know anything about us.
+            </h1>
+            <input className="name" type="text" placeholder="Name" />
+            <input className="email" type="email" placeholder="Email" />
+            <button>Join Now</button>
+          </section>
         </div>
         <aside>Aside content here!</aside>
       </Content>
@@ -99,6 +123,100 @@ function Vision(props) {
         <p>{props.description}</p>
       </div>
     </VisionContainer>
+  );
+}
+function Organization() {
+  return (
+    <OrganContainer>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/founder2.jpg" alt="founder" />
+          </div>
+          <div className="text">
+            <p>
+              Mbah Tifuh Epse Mokom Tembock, Founder of Oasis of Hope
+              Association (OHA), Entrepreneur, HND in Business Management
+            </p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post2.jpg" alt="Post 2" />
+          </div>
+          <div className="text">
+            <p>Muku Kongor Neris, Lab Technician</p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post3.jpg" alt="post 3" />
+          </div>
+          <div className="text">
+            <p>Muku Kongor Neris, Lab Technician</p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post4.jpg" alt="post 4" />
+          </div>
+          <div className="text">
+            <p>Edith Sancho Nchang, Teacher</p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post5.jpg" alt="post 5" />
+          </div>
+          <div className="text">
+            <p>
+              Emma Judith, Masters Degree in Business Administration and Finance
+            </p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post6.jpg" alt="post 6" />
+          </div>
+          <div className="text">
+            <p>
+              FAITH Nyaba, University Student majoring in English Private Law
+              and Gender Base Violence
+            </p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post7.jpg" alt="post 7" />
+          </div>
+          <div className="text">
+            <p>Mme Stella Nyaba, Teacher with degree in Economics</p>
+          </div>
+        </div>
+      </Flip>
+      <Flip left>
+        <div className="post">
+          <div className="image">
+            <img src="/images/organization/post8.jpg" alt="post 8" />
+          </div>
+          <div className="text">
+            <p>Pastor Nyaba John, Degree in Biology</p>
+          </div>
+        </div>
+      </Flip>
+    </OrganContainer>
   );
 }
 
@@ -131,6 +249,50 @@ let Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    .subscribe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 1cm;
+      margin-bottom: 1cm;
+      width: 70%;
+      h1 {
+        width: 70%;
+        font-size: 2em;
+        font-family: cambria;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgb(4, 143, 16);
+      }
+      input {
+        width: 10cm;
+        margin-bottom: 10px;
+        height: 1.25cm;
+        font-size: 1.25em;
+        padding-left: 1em;
+        background-color: rgba(4, 143, 16, 0.1);
+        border: 1px solid black;
+        border-radius: 3px;
+      }
+      button {
+        width: 5cm;
+        font-size: 1.5em;
+        border-color: transparent;
+        padding: 0.25cm;
+        color: white;
+        background-color: rgb(4, 143, 16);
+        cursor: pointer;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        &:hover {
+          color: black;
+          border-color: black;
+          background-color: white;
+        }
+      }
+    }
     .vision-part {
       background-color: rgba(0, 0, 0, 0.1);
       margin: 0.5cm 1cm;
@@ -191,6 +353,30 @@ let Content = styled.div`
         }
       }
     }
+    .join-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 2cm;
+      p {
+        font-size: 30px;
+        color: green;
+        margin-bottom: 0.5cm;
+      }
+      button {
+        background-color: rgb(111, 192, 111);
+        padding: 0.25cm 0.5cm;
+        font-size: 20px;
+        border: 1px solid transparent;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 1cm;
+        &:hover {
+          border-color: black;
+          color: black;
+        }
+      }
+    }
   }
   aside {
     width: 30%;
@@ -226,6 +412,42 @@ const VisionContainer = styled.div`
   &:hover {
     h1 {
       background-color: green;
+    }
+  }
+`;
+
+const OrganContainer = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.4cm;
+  padding: 0.25cm 1cm;
+  .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    .image {
+      img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    p {
+      text-align: center;
+      width: 85%;
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
     }
   }
 `;
