@@ -40,18 +40,18 @@ const Container = styled.div`
   padding: 15px 1cm 10px 1cm;
   position: fixed;
   box-shadow: 0.5px 0.5px 2px black;
+  background-color: white;
   width: 100%;
   left: 0
   right: 0;
   top: 0;
-  background-color: white;
   z-index: 50;
   height: 2cm;
   nav {
     margin-right: 5cm;
   }
   .logo {
-    width: 15vw;
+    width: 13vw;
     margin-top: 10px;
     img {
       width: 100%;

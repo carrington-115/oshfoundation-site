@@ -127,6 +127,10 @@ let Content = styled.div`
   .content {
     width: 65%;
     .vision-part {
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 80%;
+      padding: 1cm 0;
+      margin-bottom: 2cm;
       .heading {
         font-family: times new roman;
         font-size: 30px;

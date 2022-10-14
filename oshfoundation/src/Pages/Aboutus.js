@@ -68,10 +68,11 @@ const Container = styled.div`
 `;
 
 let Content = styled.div`
+background-color: rgba(236, 255, 233, 0.8);
 display: flex;
 width: 100%;
 min-height: 100vh;
-margin-top: 1cm;
+padding-top: 1cm;
 .content,
 aside {
   display: flex;
