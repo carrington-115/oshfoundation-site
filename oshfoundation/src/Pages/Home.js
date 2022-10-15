@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal";
+import Footer from "../components/Footer";
+import { auth } from "../components/Firebase/FirebaseConfig";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Home() {
+  const [isEmail, setIsEmail] = useState("");
+  const [isPassword, setIsPassword] = useState("");
+  const [showSignIn, setShowSignIn] = useState(false);
+
+  function CreateUser() {
+    createUserWithEmailAndPassword(auth, isEmail, isPassword);
+  }
+
   return (
     <Container>
       <HeaderIntro>
@@ -16,9 +27,24 @@ function Home() {
             If have not yet joined our Community?
             <br /> Join Now
           </h1>
-          <input className="name" type="text" placeholder="Name" />
-          <input className="email" type="email" placeholder="Email" />
-          <button>Join Now</button>
+          <input
+            className="email"
+            type="email"
+            value={isEmail}
+            placeholder="Email"
+            onChange={(e) => setIsEmail(e.target.value)}
+          />
+          <input
+            className="password"
+            type="password"
+            value={isPassword}
+            placeholder="Password"
+            onChange={(e) => setIsPassword(e.target.value)}
+          />
+          <div className="btns">
+            <button className="signin-btn">Sign in</button>
+            <button className="create-account">Create Account</button>
+          </div>
         </div>
       </HeaderIntro>
       <Content>
@@ -48,8 +74,8 @@ function Home() {
               </div>
               <div className="founder-text">
                 <h1>
-                  Mrs. Mokom Mbahtiful Tracy
-                  <br /> The Founder of OHA <hr />
+                  Mrs. Mbah Tifuh Epse Mokom Tembock
+                  <br /> <p>The Founder of OHA</p> <hr />
                   <br />
                 </h1>
                 <p>
@@ -59,7 +85,7 @@ function Home() {
                   reproduction health, entrepreneurship, counselling,
                   orientation, and motivation."
                 </p>
-                <button>Learn More</button>
+                <button>Join Now</button>
               </div>
             </section>
           </Fade>
@@ -86,13 +112,21 @@ function Home() {
               If have not yet joined our Community?
               <br /> Join Now and be the first to know anything about us.
             </h1>
-            <input className="name" type="text" placeholder="Name" />
             <input className="email" type="email" placeholder="Email" />
-            <button>Join Now</button>
+            <input
+              className="password"
+              type="password"
+              placeholder="Password"
+            />
+            <div className="btns">
+              <button className="signin-btn">Sign In</button>
+              <button className="create-account">Create Account</button>
+            </div>
           </section>
         </div>
         <aside>an aside</aside>
       </Content>
+      <Footer />
     </Container>
   );
 }
@@ -201,13 +235,16 @@ let Content = styled.div`
         flex-direction: column;
         width: 50%;
         p {
-          font-style: italic;
           text-align: center;
           font-size: 1.35em;
         }
         h1 {
           font-size: 2em;
           text-align: center;
+          p {
+            font-size: 0.8em;
+            font-style: italic;
+          }
         }
         button {
           width: 5cm;
@@ -294,20 +331,36 @@ let Content = styled.div`
         border: 1px solid black;
         border-radius: 3px;
       }
-      button {
-        width: 5cm;
-        font-size: 1.5em;
-        border-color: transparent;
-        padding: 0.25cm;
-        color: white;
-        background-color: rgb(4, 143, 16);
-        cursor: pointer;
-        border-radius: 2px;
-        border: 1px solid transparent;
-        &:hover {
+      .btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .signin-btn,
+        .create-account {
+          padding: 0.25cm 0.5cm;
+          border: 1px solid transparent;
+          cursor: pointer;
+          font-size: 20px;
+          border-radius: 2px;
+        }
+        .create-account {
+          background-color: white;
           color: black;
           border-color: black;
-          background-color: white;
+          &:hover {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-color: green;
+            color: green;
+          }
+        }
+        .signin-btn {
+          background-color: rgb(111, 192, 111);
+          color: white;
+          margin-right: 0.5cm;
+          &:hover {
+            border-color: black;
+            color: black;
+          }
         }
       }
     }
@@ -355,20 +408,36 @@ let HeaderIntro = styled.div`
       border: 1px solid black;
       border-radius: 3px;
     }
-    button {
-      width: 4cm;
-      height: 2em;
-      border-color: transparent;
-      color: white;
-      background-color: rgb(4, 143, 16);
-      cursor: pointer;
-      font-size: 30px;
-      border-radius: 2px;
-      border: 1px solid transparent;
-      &:hover {
+    .btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .signin-btn,
+      .create-account {
+        padding: 0.25cm 0.5cm;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 2px;
+      }
+      .create-account {
+        background-color: white;
         color: black;
         border-color: black;
-        background-color: white;
+        &:hover {
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          border-color: green;
+          color: green;
+        }
+      }
+      .signin-btn {
+        background-color: rgb(111, 192, 111);
+        color: white;
+        margin-right: 0.5cm;
+        &:hover {
+          border-color: black;
+          color: black;
+        }
       }
     }
   }
