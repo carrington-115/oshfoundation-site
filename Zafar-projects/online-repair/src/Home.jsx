@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./components/Header";
 import ServiceInfo from "./components/ServiceInfo";
+import SpecialOffer from "./components/SpecialOffer";
 
 const terms = [
   {
@@ -96,6 +97,7 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <SpecialOffer />
     </Container>
   );
 };
