@@ -98,6 +98,9 @@ const Home = () => {
         </div>
       </section>
       <SpecialOffer />
+      <footer>
+        <p>&copy;Online Repair Store - 2023</p>
+      </footer>
     </Container>
   );
 };
@@ -106,6 +109,19 @@ export default Home;
 
 const Container = styled.div`
   width: 100%;
+  footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1cm 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
   .page-intro {
     height: 80vh;
     width: 100vw;
